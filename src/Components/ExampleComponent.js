@@ -60,7 +60,7 @@ function ExampleComponent() {
       }
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/dish/new",
+        apiBaseUrl + "/api/dish/new",
         formDataToSend,
         {
           headers: {

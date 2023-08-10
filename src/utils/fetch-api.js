@@ -1,7 +1,9 @@
 async function fetchApi(path) {
+    const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
+
     try {
         const response = await fetch(
-            "http://127.0.0.1:8000/api/"+path
+            apiBaseUrl+"/"+path
         );
         const data = await response.json();
         return data;

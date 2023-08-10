@@ -12,7 +12,11 @@ import { FormControl, FormLabel } from "@mui/material";
 
 import fetchApi from "../utils/fetch-api";
 
+
 function ExampleComponent() {
+  
+const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
+
   const [groups, setGroups] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
@@ -60,7 +64,7 @@ function ExampleComponent() {
       }
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/dish/new",
+        apiBaseUrl + "/dish/new",
         formDataToSend,
         {
           headers: {

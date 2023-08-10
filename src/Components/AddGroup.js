@@ -5,6 +5,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
 
 export const AddGroup = (props) => {
+    const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
+
     const { addCategory, setAddCategory } = props;
     const groupNameRef = useRef('');
   
@@ -14,7 +16,7 @@ export const AddGroup = (props) => {
         const groupName = groupNameRef.current.value;
         if (groupName) {
         const response = await axios.post(
-          "http://127.0.0.1:8000/api/groups/new",
+          apiBaseUrl+"/groups/new",
           { name: groupName, restaurant: 1 }
         );
   

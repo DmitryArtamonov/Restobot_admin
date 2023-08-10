@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Box, Container, Button, TextField, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 
 function DishDetails() {
+  const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
   const { dishId } = useParams();
   const [dish, setDish] = useState(null);
   const [isEditMode, setIsEditMode] = useState(false);
@@ -20,7 +21,7 @@ function DishDetails() {
   useEffect(() => {
     async function fetchDishDetails() {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/dish/get/${dishId}`);
+        const response = await axios.get(`${apiBaseUrl}/dish/get/${dishId}`);
         setDish(response.data);
         setFormData({
           restaurant: 1,
@@ -37,7 +38,7 @@ function DishDetails() {
 
     async function fetchGroups() {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/api/groups/1");
+        const response = await axios.get(apiBaseUrl + "/groups/1");
         setGroups(response.data);
       } catch (error) {
         console.error("Error fetching groups:", error);
@@ -82,7 +83,7 @@ function DishDetails() {
       if (formData.picture) {
         formDataToSend.append("picture", formData.picture);
       }
-      const response = await axios.put(`http://127.0.0.1:8000/api/dish/update/${dishId}`, formDataToSend, {
+      const response = await axios.put(`${apiBaseUrl}/dish/update/${dishId}`, formDataToSend, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -98,7 +99,7 @@ function DishDetails() {
   const handleDeleteClick = async () => {
     console.log('deleting no:', dishId)
     try {
-      const response = await axios.delete(`http://127.0.0.1:8000/api/dish/delete/${dishId}`)
+      const response = await axios.delete(`${apiBaseUrl}/api/dish/delete/${dishId}`)
     } catch(error) {
       console.log('Error deleting dish', error)
     }
