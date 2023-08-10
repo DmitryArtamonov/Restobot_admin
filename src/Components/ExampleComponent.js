@@ -13,6 +13,8 @@ import { FormControl, FormLabel } from "@mui/material";
 import fetchApi from "../utils/fetch-api";
 
 function ExampleComponent() {
+  const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
+
   const [groups, setGroups] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
