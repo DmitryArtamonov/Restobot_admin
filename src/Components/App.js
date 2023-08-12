@@ -5,6 +5,7 @@ import OrdersPage from "./OrdersPage";
 import MenuPage from "./MenuPage";
 import ExampleComponent from "./ExampleComponent";
 import DishDetails from "./DishDetails";
+import OrderDetails from "./OrderDetails";
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
                 <Route path="/add-dish" element={<ExampleComponent />} />
                 <Route path="/test" element={<ExampleComponent />} />
                 <Route path="/dish/:dishId" element={<DishDetails />} />
+                <Route path="/order/:orderId" element={<OrderDetails />} />
 
             </Routes>
         </BrowserRouter>
