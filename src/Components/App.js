@@ -9,7 +9,7 @@ import OrderDetails from "./OrderDetails";
 
 const App = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter sx={{m: 1}}>
             <NavBar />
             <Routes>
                 <Route exact path="/" element={<OrdersPage />} />

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Box, Container, Button, TextField, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 
 function DishDetails() {
@@ -17,6 +17,15 @@ function DishDetails() {
     picture: null,
   });
   const [groups, setGroups] = useState([]);
+
+// Navigation
+
+  const navigate = useNavigate();
+  const navigateToMenu = () => {
+    navigate('/menu');
+  };
+
+// GET
 
   useEffect(() => {
     async function fetchDishDetails() {
@@ -72,6 +81,8 @@ function DishDetails() {
     setIsEditMode(false);
   };
 
+// UPDATE
+
   const handleUpdate = async () => {
     try {
       const formDataToSend = new FormData();
@@ -88,18 +99,22 @@ function DishDetails() {
           "Content-Type": "multipart/form-data",
         },
       });
-
       setDish(response.data);
       setIsEditMode(false);
+      navigateToMenu();
+
     } catch (error) {
       console.error("Error updating dish:", error);
     }
   };
 
+  // DELETE
+
   const handleDeleteClick = async () => {
     console.log('deleting no:', dishId)
     try {
-      const response = await axios.delete(`${apiBaseUrl}/api/dish/delete/${dishId}`)
+      const response = await axios.delete(`${apiBaseUrl}/dish/delete/${dishId}`)
+      navigateToMenu();
     } catch(error) {
       console.log('Error deleting dish', error)
     }

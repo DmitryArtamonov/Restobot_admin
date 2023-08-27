@@ -76,7 +76,7 @@ const OrdersPage = () => {
     }, []);
 
     return (
-        <div style={{ height: 400, width: "100%" }}>
+        <div style={{ height: 400, width: "96%", padding: "10px" }}>
             <h3>Orders</h3>
 
             {orders ? (
