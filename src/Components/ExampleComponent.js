@@ -62,7 +62,7 @@ function ExampleComponent() {
       }
 
       const response = await axios.post(
-        apiBaseUrl + "/api/dish/new",
+        apiBaseUrl + "/dish/new",
         formDataToSend,
         {
           headers: {
