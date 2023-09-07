@@ -8,7 +8,7 @@ import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Button from "@mui/material/Button";
-import { FormControl, FormLabel } from "@mui/material";
+import { FormControl } from "@mui/material";
 
 import fetchApi from "../utils/fetch-api";
 

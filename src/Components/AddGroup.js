@@ -7,7 +7,7 @@ import axios from "axios";
 export const AddGroup = (props) => {
     const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
 
-    const { addCategory, setAddCategory } = props;
+    const { setAddCategory } = props;
     const groupNameRef = useRef('');
   
     const addNewCategory = async () => {
@@ -15,7 +15,7 @@ export const AddGroup = (props) => {
         // Access the input value using the ref
         const groupName = groupNameRef.current.value;
         if (groupName) {
-        const response = await axios.post(
+        await axios.post(
           apiBaseUrl+"/groups/new",
           { name: groupName, restaurant: 1 }
         );

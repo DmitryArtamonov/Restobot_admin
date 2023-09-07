@@ -12,7 +12,7 @@ const columns = [
         headerName: "",
         width: 70,
         minWidth: 70,
-        renderCell: (params) => <img src={params.value} width={50} />,
+        renderCell: (params) => <img src={params.value} alt="" width={50} />,
     },
     {
         field: "group",

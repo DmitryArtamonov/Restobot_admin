@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import { Container, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import fetchApi from "../utils/fetch-api";
 
-import { AddGroup } from "./AddGroup";
 
 const columns = [
     {

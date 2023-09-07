@@ -113,7 +113,7 @@ function DishDetails() {
   const handleDeleteClick = async () => {
     console.log('deleting no:', dishId)
     try {
-      const response = await axios.delete(`${apiBaseUrl}/dish/delete/${dishId}`)
+      await axios.delete(`${apiBaseUrl}/dish/delete/${dishId}`)
       navigateToMenu();
     } catch(error) {
       console.log('Error deleting dish', error)

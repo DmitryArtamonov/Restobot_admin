@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { Box, Container, Button, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
+import { Box, Container, Button, FormControl, Select, MenuItem } from "@mui/material";
 
 function OrderDetails() {
   const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
   const { orderId } = useParams();
   const [order, setOrder] = useState(null);
   const [status, setStatus] = useState("");
-  const [isEditMode, setIsEditMode] = useState(false);
 
   useEffect(() => {
     async function fetchOrderDetails() {
@@ -31,7 +30,6 @@ function OrderDetails() {
   const handleUpdateStatus = async () => {
     try {
       await axios.put(`${apiBaseUrl}/order/update/${orderId}`, { status });
-      setIsEditMode(false);
     } catch (error) {
       console.error("Error updating order status:", error);
     }
