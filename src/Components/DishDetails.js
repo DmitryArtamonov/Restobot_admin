@@ -94,12 +94,15 @@ function DishDetails() {
       if (formData.picture) {
         formDataToSend.append("picture", formData.picture);
       }
-      const response = await axios.put(`${apiBaseUrl}/dish/update/${dishId}`, formDataToSend, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-      setDish(response.data);
+      
+      // const response = await axios.put(`${apiBaseUrl}/dish/update/${dishId}`, formDataToSend, {
+      //   headers: {
+      //     "Content-Type": "multipart/form-data",
+      //   },
+      // });
+      // setDish(response.data);
+      window.alert('Editing is not allowed in demo')
+
       setIsEditMode(false);
       navigateToMenu();
 
@@ -113,8 +116,9 @@ function DishDetails() {
   const handleDeleteClick = async () => {
     console.log('deleting no:', dishId)
     try {
-      await axios.delete(`${apiBaseUrl}/dish/delete/${dishId}`)
-      navigateToMenu();
+      window.alert('Deleting is not allowed in demo')
+      // await axios.delete(`${apiBaseUrl}/dish/delete/${dishId}`)
+      // navigateToMenu();
     } catch(error) {
       console.log('Error deleting dish', error)
     }

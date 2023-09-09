@@ -13,9 +13,6 @@ const NavBar = () => {
             <Link to="/menu">
                 <Button>Menu</Button>
             </Link>
-            <Link to="/test">
-                <Button>TEST</Button>
-            </Link>
         </div>
     );
 };

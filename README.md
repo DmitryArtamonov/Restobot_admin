@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+**Restobot** is my learning project in the Tel-Aviv Developers Institute.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project aims to facilitate communication between restaurants and their clients using a Telegram bot.
 
-## Available Scripts
+On the restaurant side, there is a web application that allows menu editing, real-time order management, client communication, and the option to send mailings to all clients.
+![img_3.png](img_3.png)
 
-In the project directory, you can run:
+The clients can access the restaurant's menu, place orders, and inquire about dishes directly through the chatbot.
+![img_1.png](img_1.png)
 
-### `npm start`
+**Stack:**
+* Database: PostgreSQL
+* Backend: Django Rest, Python
+* Bot Module: Aiogram, Python
+* Frontend for restaurants: React, JavaScript, Material UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Deployment:**
+* Database: Render
+* Static and Media Files: Amazon S3
+* Backend: Heroku
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Data scheme:**
 
-### `npm test`
+![img_2.png](img_2.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Features:**
 
-### `npm run build`
+For Managers in the Web App:
+* Edit the menu by adding, editing, or deleting dishes, and create categories.
+* Add dishes to the stop-list (temporarily remove them from the menu).
+* Receive and approve incoming orders.
+* Send messages directly to individual clients.
+* Send mass mailings to all clients.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For Telegram users:
+* Access the restaurant's menu, view pictures, descriptions, and prices of dishes.
+* Explore different categories within the menu.
+* Search for specific dishes by name.
+* Add dishes to the cart.
+* Calculate the total price of the order.
+* Provide necessary details and submit the order.
+* Engage in direct communication with the restaurant through messages.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Links:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [The Bot](https://t.me/demo_restobot)
 
-### `npm run eject`
+* [Admin page](https://restobot-admin-f22c572188ab.herokuapp.com/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* [Video Presentation](https://restobot-img1.s3.eu-central-1.amazonaws.com/static/media/Restobot_presentation.mp4)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* [GitHub (Django Backend + Telegram module) 
+](https://github.com/DmitryArtamonov/Restobot)
 
-## Learn More
+* [GitHub (React Frontend)](https://github.com/DmitryArtamonov/Restobot_admin
+) 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* [My Portfolio](https://dmitryartamonov.github.io/Portfolio/
+)
 
-### Code Splitting
+**Contacts**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* [Gmail: artamonov2009@gmail.com](mailto:artamonov2009@gmail.com
+)
+* [Telegram](https://t.me/dmitry_2727)
+* [Gitgub](https://github.com/DmitryArtamonov)
+* [LinkdIn](https://www.linkedin.com/in/dmitry-artamonov-660b16267/)
